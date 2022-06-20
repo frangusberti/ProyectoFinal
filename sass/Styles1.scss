@@ -5,7 +5,14 @@
   list-style: none;
   box-sizing: border-box;
 }
-
+@mixin prop1 {
+  color: map-get($map: $colores, $key: "1");
+  font-family: "Orbitron", sans-serif;
+}
+@mixin prop2 {
+  color: map-get($map: $colores, $key: "2");
+  font-family: "Orbitron", sans-serif;
+}
 $colores: (
   "1": rgb(0, 0, 0),
   "2": rgb(255, 255, 255),
@@ -50,18 +57,17 @@ $colores: (
 }
 .descripcion {
   display: grid;
-  color: map-get($map: $colores, $key: "1");
+  @include prop1();
   font-size: 30px;
   text-align: justify;
   max-width: 70%;
-  font-family: "Orbitron", sans-serif;
+
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 footer {
-  color: map-get($map: $colores, $key: "1");
-  font-family: "Orbitron", sans-serif;
+  @include prop1();
   position: relative;
   bottom: 0;
   padding: 1em 0;
@@ -212,8 +218,4 @@ form {
   #post {
     width: 100%;
   }
-}
-
-/* mixins */
-@mixin barra {
 }

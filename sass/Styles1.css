@@ -46,10 +46,10 @@
   display: -ms-grid;
   display: grid;
   color: black;
+  font-family: "Orbitron", sans-serif;
   font-size: 30px;
   text-align: justify;
   max-width: 70%;
-  font-family: "Orbitron", sans-serif;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -217,6 +217,4 @@ form {
     width: 100%;
   }
 }
-
-/* mixins */
 /*# sourceMappingURL=Styles1.css.map */
