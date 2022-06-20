@@ -119,23 +119,7 @@ footer {
   margin-left: 20px;
 }
 .darker {
-  border: 1px solid map-get($map: $colores, $key: "3");
-  background-color: map-get($map: $colores, $key: "1");
-  float: right;
-  border-radius: 5px;
-  padding-left: 40px;
-  padding-right: 30px;
-  padding-top: 10px;
-  h4 {
-    display: inline;
-  }
-  span {
-    display: inline;
-    color: rgb(184, 183, 183);
-  }
-  p {
-    color: rgb(184, 183, 183);
-  }
+  @extend .comment;
 }
 .comment {
   border: 1px solid rgba(16, 46, 46, 1);

@@ -110,30 +110,7 @@ footer {
   margin-left: 20px;
 }
 
-.darker {
-  border: 1px solid cyan;
-  background-color: black;
-  float: right;
-  border-radius: 5px;
-  padding-left: 40px;
-  padding-right: 30px;
-  padding-top: 10px;
-}
-
-.darker h4 {
-  display: inline;
-}
-
-.darker span {
-  display: inline;
-  color: #b8b7b7;
-}
-
-.darker p {
-  color: #b8b7b7;
-}
-
-.comment {
+.comment, .darker {
   border: 1px solid #102e2e;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5c3f64), color-stop(25%, #4a2f5e), color-stop(50%, #321f59), color-stop(75%, #0a1254), to(#000550));
   background-image: linear-gradient(180deg, #5c3f64 0, #4a2f5e 25%, #321f59 50%, #0a1254 75%, #000550 100%);
@@ -143,16 +120,16 @@ footer {
   padding-right: 30px;
 }
 
-.comment h4 {
+.comment h4, .darker h4 {
   display: inline;
 }
 
-.comment span {
+.comment span, .darker span {
   display: inline;
   color: #b8b7b7;
 }
 
-.comment p {
+.comment p, .darker p {
   color: #b8b7b7;
 }
 
