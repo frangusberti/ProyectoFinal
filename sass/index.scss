@@ -1,0 +1,120 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: url(../imagenes/pexels-arminas-raudys-904177.jpg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+@mixin prop1 {
+  color: map-get($map: $colores, $key: "1");
+  font-family: "Orbitron", sans-serif;
+}
+@mixin prop2 {
+  color: map-get($map: $colores, $key: "2");
+  font-family: "Orbitron", sans-serif;
+}
+$colores: (
+  "1": rgb(0, 0, 0),
+  "2": rgb(255, 255, 255),
+  "3": rgba(17, 0, 255, 0.199),
+);
+.borde {
+  border: 1px #000 solid;
+  text-align: center;
+}
+#navbarScroll {
+  font-family: "Orbitron", sans-serif;
+}
+.navbar-brand {
+  font-family: "Orbitron", sans-serif;
+}
+#pie {
+  position: relative;
+  bottom: 0;
+  padding: 1em 0;
+  text-align: center;
+  transform: translateY(100%);
+}
+.descripcion {
+  background-color: rgba(3, 43, 175, 0.116);
+  height: 10rem;
+  width: fit-content;
+  border-radius: 10px;
+  padding-top: 2rem;
+}
+@media only screen and (min-width: 767px) {
+  .textos {
+    position: relative;
+    margin: 2rem 15%;
+  }
+  .texto {
+    font-weight: 500;
+    margin-top: 10rem;
+    background-color: rgba(0, 0, 0, 0.062);
+    max-width: fit-content;
+    color: red;
+  }
+  .animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #00fff2 0%,
+      #0026ff 29%,
+
+      #000000 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: map-get($map: $colores, $key: "1");
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .textos {
+    position: relative;
+    margin: 2rem 5%;
+  }
+  .texto {
+    margin-top: 2rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.199);
+    max-width: fit-content;
+    color: red;
+  }
+  .animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #00fff2 0%,
+      #0026ff 29%,
+
+      #050505 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: map-get($map: $colores, $key: "1");
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 40px;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}

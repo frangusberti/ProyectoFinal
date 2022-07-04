@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../imagenes/pexels-arminas-raudys-904177.jpg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@mixin prop1 {
+  color: map-get($map: $colores, $key: "1");
+  font-family: "Orbitron", sans-serif;
+}
+@mixin prop2 {
+  color: map-get($map: $colores, $key: "2");
+  font-family: "Orbitron", sans-serif;
+}
+$colores: (
+  "1": rgb(0, 0, 0),
+  "2": rgb(255, 255, 255),
+  "3": rgba(17, 0, 255, 0.199),
+);
+#navbarScroll {
+  font-family: "Orbitron", sans-serif;
+}
+.navbar-brand {
+  font-family: "Orbitron", sans-serif;
+}
+#pie {
+  position: relative;
+  bottom: 0;
+  padding: 1em 0;
+  text-align: center;
+  transform: translateY(100%);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    border: solid 4px map-get($map: $colores, $key: "3");
+    .card1 {
+      background-color: transparent;
+    }
+    background-image: radial-gradient(
+      circle at 50% -20.71%,
+      #a7deff 0,
+      #6c90d8 50%,
+      #38496b 100%
+    );
+    z-index: 10;
+    font-family: "Orbitron", sans-serif;
+    padding: 5px;
+    border-radius: 20px;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .stats {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    color: map-get($map: $colores, $key: "1");
+  }
+}
+@media only screen and (max-width: 766px) {
+  .stats {
+    display: none;
+    margin: 20px;
+    justify-content: space-between;
+    color: map-get($map: $colores, $key: "1");
+  }
+}
+
+.stats1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  padding: 1rem;
+  max-width: fit-content;
+  span {
+    &:nth-child(1) {
+      color: map-get($map: $colores, $key: "3");
+      font-size: 18px;
+    }
+    &:nth-child(2) {
+      font-weight: 800;
+      font-size: 11px;
+    }
+  }
+  &:hover {
+    background-color: rgba(150, 150, 150, 0.315);
+  }
+}
+.card1 {
+  margin-top: 40px;
+  position: relative;
+  background-color: rgb(36, 0, 136);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  height: 100%;
+  gap: 20px;
+  .form-control {
+    width: 100%;
+    position: relative;
+    input[type="text"] {
+      width: 100%;
+      height: 30px;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+      margin-top: 25px;
+      padding: 0 24px;
+      box-sizing: border-box;
+      background-color: #f9f9fb5d;
+    }
+    span {
+      position: absolute;
+      top: 32px;
+      font-size: 12px;
+      left: 24px;
+    }
+    i {
+      position: absolute;
+      top: 33px;
+      left: 3px;
+      font-size: 14px;
+    }
+    .fa-mobile-phone {
+      position: absolute;
+      top: 30px;
+      left: 3px;
+      font-size: 22px;
+    }
+  }
+  .right {
+    margin-top: 24px;
+    box-sizing: border-box;
+    textarea {
+      height: 140px;
+      resize: none;
+      width: 100%;
+      border: none;
+      outline: none;
+      background-color: #ffffff;
+      padding-top: 7px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+    .text-area {
+      span {
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        font-size: 12px;
+        color: #000000;
+      }
+    }
+  }
+}
+.form-control {
+  input {
+    &:focus {
+      ~ {
+        span {
+          top: 6px;
+          font-size: 12px;
+          font-weight: 800;
+        }
+      }
+    }
+    &:valid {
+      ~ {
+        span {
+          top: 6px;
+          font-size: 12px;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+.text-area {
+  position: relative;
+  textarea {
+    &:focus {
+      ~ {
+        span {
+          top: -20px !important;
+          font-size: 12px;
+          font-weight: 800;
+        }
+      }
+    }
+    &:valid {
+      ~ {
+        span {
+          top: -20px !important;
+          font-size: 12px;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+.button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  button {
+    height: 30px;
+    width: 200px;
+    border: none;
+    background-color: rgb(5, 226, 255);
+    color: #fff;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+}

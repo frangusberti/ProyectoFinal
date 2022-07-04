@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../imagenes/pexels-arminas-raudys-904177.jpg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@mixin prop1 {
+  color: map-get($map: $colores, $key: "1");
+  font-family: "Orbitron", sans-serif;
+}
+@mixin prop2 {
+  color: map-get($map: $colores, $key: "2");
+  font-family: "Orbitron", sans-serif;
+}
+$colores: (
+  "1": rgb(0, 0, 0),
+  "2": rgb(255, 255, 255),
+  "3": rgba(17, 0, 255, 0.199),
+  "4": rgb(0, 255, 255),
+);
+#navbarScroll {
+  font-family: "Orbitron", sans-serif;
+}
+.navbar-brand {
+  font-family: "Orbitron", sans-serif;
+}
+#pie {
+  position: relative;
+  bottom: 0;
+  padding: 1em 0;
+  text-align: center;
+  transform: translateY(100%);
+}
+.galeria {
+  margin: 20px;
+  margin-top: 50px;
+}
+@media (min-width: 1024px) {
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+    img {
+      width: 90%;
+      border: 2px solid map-get($map: $colores, $key: "4");
+      margin: 20px;
+    }
+    p {
+      margin: 0 3%;
+      font-family: "Public Sans", sans-serif;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    img {
+      width: 90%;
+      border: 2px solid map-get($map: $colores, $key: "4");
+      margin: 20px;
+    }
+    p {
+      margin: 0 3%;
+    }
+  }
+}

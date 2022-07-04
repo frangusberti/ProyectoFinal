@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../imagenes/pexels-arminas-raudys-904177.jpg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@mixin prop1 {
+  color: map-get($map: $colores, $key: "1");
+  font-family: "Orbitron", sans-serif;
+}
+@mixin prop2 {
+  color: map-get($map: $colores, $key: "2");
+  font-family: "Orbitron", sans-serif;
+}
+$colores: (
+  "1": rgb(0, 0, 0),
+  "2": rgb(255, 255, 255),
+  "3": rgba(17, 0, 255, 0.199),
+);
+#navbarScroll {
+  font-family: "Orbitron", sans-serif;
+}
+.navbar-brand {
+  font-family: "Orbitron", sans-serif;
+}
+.comment {
+  border: 1px solid rgba(16, 46, 46, 1);
+  background-color: rgba(0, 0, 0, 0.247);
+  float: left;
+  border-radius: 5px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding: 1rem;
+  max-height: 200px;
+  max-width: 300px;
+
+  h4 {
+    display: inline;
+  }
+  span {
+    display: inline;
+    color: map-get($map: $colores, $key: 1);
+  }
+  p {
+    color: map-get($map: $colores, $key: 1);
+  }
+}
+@media only screen and (max-width: 766px) {
+  .comments {
+    margin-top: 1%;
+    margin-left: 20px;
+    margin-bottom: 10rem;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .comments {
+    margin-top: 1%;
+    margin-left: 20px;
+  }
+}
+
+.darker {
+  @extend .comment;
+}
+#post {
+  margin: 5px;
+  padding: 6px;
+  padding-top: 2px;
+
+  text-align: center;
+  background-color: map-get($map: $colores, $key: "3");
+  border-color: map-get($map: $colores, $key: "3")
+    map-get($map: $colores, $key: "3") map-get($map: $colores, $key: "3");
+  color: map-get($map: $colores, $key: "1");
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 13px;
+  width: 50%;
+}
+#pie {
+  position: relative;
+  bottom: 0;
+
+  text-align: center;
+  transform: translateY(100%);
+}
