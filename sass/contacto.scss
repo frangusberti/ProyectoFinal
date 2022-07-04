@@ -37,6 +37,7 @@ $colores: (
   display: flex;
   justify-content: center;
   align-items: center;
+
   .card {
     border: solid 4px map-get($map: $colores, $key: "3");
     .card1 {
@@ -58,7 +59,7 @@ $colores: (
 @media only screen and (min-width: 767px) {
   .stats {
     display: flex;
-    margin: 20px;
+    margin: 10px;
     justify-content: space-between;
     color: map-get($map: $colores, $key: "1");
   }
@@ -66,7 +67,7 @@ $colores: (
 @media only screen and (max-width: 766px) {
   .stats {
     display: none;
-    margin: 20px;
+    margin: 10px;
     justify-content: space-between;
     color: map-get($map: $colores, $key: "1");
   }
@@ -97,7 +98,6 @@ $colores: (
   }
 }
 .card1 {
-  margin-top: 40px;
   position: relative;
   background-color: rgb(36, 0, 136);
   border-radius: 10px;
