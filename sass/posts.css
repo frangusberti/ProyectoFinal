@@ -6,27 +6,48 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: "Orbitron", sans-serif;
 }
 
 .container {
   margin-top: 2rem;
   margin-bottom: 5rem;
-  background-color: rgba(0, 81, 255, 0.171);
+  background-color: rgba(200, 204, 255, 0.719);
   border-radius: 10px;
+  padding: 1rem;
 }
 
 @media only screen and (min-width: 767px) {
+  .parrafo {
+    padding: 0.1rem;
+    font-family: "Oswald", sans-serif;
+    font-size: large;
+  }
   .container {
     margin: 1rem 5rem;
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
-    padding: 1rem;
   }
+}
+
+.ref {
+  font-size: xx-small;
+}
+
+#pie {
+  position: absolute;
+  padding: 0.5em;
+  text-align: center;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 @media only screen and (max-width: 766px) {
   .container {
+    padding: 10px;
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
@@ -37,7 +58,8 @@ body {
     margin-bottom: 5rem;
   }
   .container .parrafo {
-    font-size: 10px;
+    font-size: 14px;
+    font-family: "Oswald", sans-serif;
   }
 }
 
@@ -47,14 +69,5 @@ body {
 
 .navbar-brand {
   font-family: "Orbitron", sans-serif;
-}
-
-#pie {
-  position: relative;
-  bottom: 0;
-  padding: 1em 0;
-  text-align: center;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
 }
 /*# sourceMappingURL=posts.css.map */

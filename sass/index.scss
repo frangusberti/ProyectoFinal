@@ -4,8 +4,9 @@ body {
   background: url(../imagenes/pexels-arminas-raudys-904177.jpg);
   background-position: top;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: "Orbitron", sans-serif;
 }
 @mixin prop1 {
   color: map-get($map: $colores, $key: "1");
@@ -31,20 +32,26 @@ $colores: (
   font-family: "Orbitron", sans-serif;
 }
 #pie {
-  position: relative;
-  bottom: 0;
-  padding: 1em 0;
+  position: absolute;
+  padding: 0.5em;
   text-align: center;
-  transform: translateY(100%);
+  width: 100%;
 }
-.descripcion {
-  background-color: rgba(3, 43, 175, 0.116);
-  height: 10rem;
-  width: fit-content;
+
+.texto {
+  margin: 1rem;
+  padding: 1rem;
   border-radius: 10px;
-  padding-top: 2rem;
 }
 @media only screen and (min-width: 767px) {
+  .descripcion {
+    background-color: rgba(3, 43, 175, 0.116);
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+  }
   .textos {
     position: relative;
     margin: 2rem 15%;
@@ -55,6 +62,7 @@ $colores: (
     background-color: rgba(0, 0, 0, 0.062);
     max-width: fit-content;
     color: red;
+    height: fit-content;
   }
   .animate-charcter {
     text-transform: uppercase;
@@ -68,7 +76,7 @@ $colores: (
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
-    color: map-get($map: $colores, $key: "1");
+    color: #fff;
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -79,6 +87,18 @@ $colores: (
   }
 }
 @media only screen and (max-width: 766px) {
+  #pie {
+    font-size: small;
+  }
+  .descripcion {
+    background-color: rgba(3, 43, 175, 0.116);
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: small;
+  }
   .textos {
     position: relative;
     margin: 2rem 5%;
@@ -89,6 +109,8 @@ $colores: (
     background-color: rgba(0, 0, 0, 0.199);
     max-width: fit-content;
     color: red;
+    font-size: small;
+    height: fit-content;
   }
   .animate-charcter {
     text-transform: uppercase;
@@ -102,7 +124,7 @@ $colores: (
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
-    color: map-get($map: $colores, $key: "1");
+    color: #fff;
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;

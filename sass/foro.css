@@ -16,7 +16,17 @@ body {
   font-family: "Orbitron", sans-serif;
 }
 
+.titulos {
+  font-family: "Orbitron", sans-serif;
+  margin: 3rem;
+}
+
+.texto {
+  font-family: "Orbitron", sans-serif;
+}
+
 .comment, .darker {
+  margin: 10px;
   border: 1px solid #102e2e;
   background-color: rgba(0, 0, 0, 0.247);
   float: left;
@@ -36,6 +46,10 @@ body {
   display: inline;
 }
 
+.comment p, .darker p {
+  font-size: small;
+}
+
 @media only screen and (max-width: 766px) {
   .comments {
     margin-top: 1%;
@@ -51,10 +65,15 @@ body {
   }
 }
 
+.titulos {
+  font-family: "Orbitron", sans-serif;
+}
+
 #post {
   margin: 5px;
   padding: 6px;
   padding-top: 2px;
+  font-family: "Orbitron", sans-serif;
   text-align: center;
   background-color: rgba(17, 0, 255, 0.199);
   border-color: rgba(17, 0, 255, 0.199) rgba(17, 0, 255, 0.199) rgba(17, 0, 255, 0.199);
@@ -68,6 +87,7 @@ body {
 #pie {
   position: relative;
   bottom: 0;
+  font-family: "Orbitron", sans-serif;
   text-align: center;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);

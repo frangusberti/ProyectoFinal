@@ -6,6 +6,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: "Orbitron", sans-serif;
 }
 @mixin prop1 {
   color: map-get($map: $colores, $key: "1");
@@ -18,23 +19,39 @@ body {
 $colores: (
   "1": rgb(0, 0, 0),
   "2": rgb(255, 255, 255),
-  "3": rgba(17, 0, 255, 0.199),
+  "3": rgba(200, 204, 255, 0.719),
 );
 .container {
   margin-top: 2rem;
   margin-bottom: 5rem;
-  background-color: rgba(0, 81, 255, 0.171);
+  background-color: map-get($map: $colores, $key: "3");
   border-radius: 10px;
+  padding: 1rem;
 }
 @media only screen and (min-width: 767px) {
+  .parrafo {
+    padding: 0.1rem;
+    font-family: "Oswald", sans-serif;
+    font-size: large;
+  }
   .container {
     margin: 1rem 5rem;
     max-width: fit-content;
-    padding: 1rem;
   }
+}
+.ref {
+  font-size: xx-small;
+}
+#pie {
+  position: absolute;
+  padding: 0.5em;
+  text-align: center;
+  width: 100%;
+  height: fit-content;
 }
 @media only screen and (max-width: 766px) {
   .container {
+    padding: 10px;
     max-width: fit-content;
     margin: 1rem;
     background-color: map-get($map: $colores, $key: "1");
@@ -43,7 +60,8 @@ $colores: (
     margin-bottom: 5rem;
 
     .parrafo {
-      font-size: 10px;
+      font-size: 14px;
+      font-family: "Oswald", sans-serif;
     }
   }
 }
@@ -52,11 +70,4 @@ $colores: (
 }
 .navbar-brand {
   font-family: "Orbitron", sans-serif;
-}
-#pie {
-  position: relative;
-  bottom: 0;
-  padding: 1em 0;
-  text-align: center;
-  transform: translateY(100%);
 }

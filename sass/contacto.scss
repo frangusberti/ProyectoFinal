@@ -26,12 +26,10 @@ $colores: (
 .navbar-brand {
   font-family: "Orbitron", sans-serif;
 }
-#pie {
-  position: relative;
-  bottom: 0;
-  padding: 1em 0;
-  text-align: center;
-  transform: translateY(100%);
+
+.titulos {
+  font-family: "Orbitron", sans-serif;
+  margin: 3rem;
 }
 .container {
   display: flex;
@@ -39,6 +37,13 @@ $colores: (
   align-items: center;
 
   .card {
+    .top-div {
+      padding: 10px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: fit-content;
+    }
     border: solid 4px map-get($map: $colores, $key: "3");
     .card1 {
       background-color: transparent;
@@ -47,7 +52,7 @@ $colores: (
       circle at 50% -20.71%,
       #a7deff 0,
       #6c90d8 50%,
-      #38496b 100%
+      #38686b 100%
     );
     z-index: 10;
     font-family: "Orbitron", sans-serif;
@@ -55,6 +60,9 @@ $colores: (
     border-radius: 20px;
     width: auto;
   }
+}
+.texto {
+  font-family: "Orbitron", sans-serif;
 }
 @media only screen and (min-width: 767px) {
   .stats {
@@ -72,7 +80,11 @@ $colores: (
     color: map-get($map: $colores, $key: "1");
   }
 }
-
+@media only screen and (max-width: 766px) {
+  .card1 {
+    flex-wrap: wrap;
+  }
+}
 .stats1 {
   display: flex;
   flex-direction: column;
@@ -97,6 +109,10 @@ $colores: (
     background-color: rgba(150, 150, 150, 0.315);
   }
 }
+.titulos {
+  font-family: "Orbitron", sans-serif;
+}
+
 .card1 {
   position: relative;
   background-color: rgb(36, 0, 136);
@@ -110,6 +126,7 @@ $colores: (
   .form-control {
     width: 100%;
     position: relative;
+    margin: 5%;
     input[type="text"] {
       width: 100%;
       height: 30px;
@@ -144,7 +161,7 @@ $colores: (
     margin-top: 24px;
     box-sizing: border-box;
     textarea {
-      height: 140px;
+      height: 230px;
       resize: none;
       width: 100%;
       border: none;
@@ -214,6 +231,7 @@ $colores: (
 .button {
   display: flex;
   justify-content: center;
+  padding-bottom: 10px;
   position: relative;
   button {
     height: 30px;

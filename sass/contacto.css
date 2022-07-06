@@ -16,13 +16,9 @@ body {
   font-family: "Orbitron", sans-serif;
 }
 
-#pie {
-  position: relative;
-  bottom: 0;
-  padding: 1em 0;
-  text-align: center;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+.titulos {
+  font-family: "Orbitron", sans-serif;
+  margin: 3rem;
 }
 
 .container {
@@ -39,7 +35,7 @@ body {
 
 .container .card {
   border: solid 4px rgba(17, 0, 255, 0.199);
-  background-image: radial-gradient(circle at 50% -20.71%, #a7deff 0, #6c90d8 50%, #38496b 100%);
+  background-image: radial-gradient(circle at 50% -20.71%, #a7deff 0, #6c90d8 50%, #38686b 100%);
   z-index: 10;
   font-family: "Orbitron", sans-serif;
   padding: 5px;
@@ -47,8 +43,23 @@ body {
   width: auto;
 }
 
+.container .card .top-div {
+  padding: 10px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .container .card .card1 {
   background-color: transparent;
+}
+
+.texto {
+  font-family: "Orbitron", sans-serif;
 }
 
 @media only screen and (min-width: 767px) {
@@ -72,6 +83,13 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     color: black;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+  .card1 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -113,6 +131,10 @@ body {
   background-color: rgba(150, 150, 150, 0.315);
 }
 
+.titulos {
+  font-family: "Orbitron", sans-serif;
+}
+
 .card1 {
   position: relative;
   background-color: #240088;
@@ -130,6 +152,7 @@ body {
 .card1 .form-control {
   width: 100%;
   position: relative;
+  margin: 5%;
 }
 
 .card1 .form-control input[type="text"] {
@@ -173,7 +196,7 @@ body {
 }
 
 .card1 .right textarea {
-  height: 140px;
+  height: 230px;
   resize: none;
   width: 100%;
   border: none;
@@ -229,6 +252,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 10px;
   position: relative;
 }
 

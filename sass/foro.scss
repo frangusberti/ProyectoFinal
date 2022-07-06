@@ -26,7 +26,15 @@ $colores: (
 .navbar-brand {
   font-family: "Orbitron", sans-serif;
 }
+.titulos {
+  font-family: "Orbitron", sans-serif;
+  margin: 3rem;
+}
+.texto {
+  font-family: "Orbitron", sans-serif;
+}
 .comment {
+  margin: 10px;
   border: 1px solid rgba(16, 46, 46, 1);
   background-color: rgba(0, 0, 0, 0.247);
   float: left;
@@ -46,6 +54,7 @@ $colores: (
   }
   p {
     color: map-get($map: $colores, $key: 1);
+    font-size: small;
   }
 }
 @media only screen and (max-width: 766px) {
@@ -61,7 +70,9 @@ $colores: (
     margin-left: 20px;
   }
 }
-
+.titulos {
+  font-family: "Orbitron", sans-serif;
+}
 .darker {
   @extend .comment;
 }
@@ -69,7 +80,7 @@ $colores: (
   margin: 5px;
   padding: 6px;
   padding-top: 2px;
-
+  font-family: "Orbitron", sans-serif;
   text-align: center;
   background-color: map-get($map: $colores, $key: "3");
   border-color: map-get($map: $colores, $key: "3")
@@ -83,7 +94,7 @@ $colores: (
 #pie {
   position: relative;
   bottom: 0;
-
+  font-family: "Orbitron", sans-serif;
   text-align: center;
   transform: translateY(100%);
 }
